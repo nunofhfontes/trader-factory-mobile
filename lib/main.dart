@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(TraderFactoryApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class TraderFactoryApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TraderFactory Stocks',
+      title: 'TraderFactory App',
       theme: ThemeData(
         primarySwatch: Colors.green,
         scaffoldBackgroundColor: Colors.black,
