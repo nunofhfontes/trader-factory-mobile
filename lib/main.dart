@@ -20,7 +20,7 @@ class TraderFactoryApp extends StatelessWidget {
       // ),
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(#06f71b),
+          backgroundColor: Color(0xff06f71b),
           title: Center(child:
             Text('Trader Factory'),
           )
