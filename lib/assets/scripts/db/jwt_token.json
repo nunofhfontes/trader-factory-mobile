@@ -1,3 +1,7 @@
 {
-	'jwt': 'fcdhsuiafbreifbhruiefgbreuibguerbfguirgftuwh754y7584y594hfuiebrufbrjfbsd'
+  "iss": "traderfactory.com",
+  "exp": 1426420800,
+  "https://traderfactory/jwt_claims/is_admin": true,
+  "company": "TraderFactory",
+  "awesome": true
 }
