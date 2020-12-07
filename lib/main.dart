@@ -19,20 +19,25 @@ class TraderFactoryApp extends StatelessWidget {
       //   visualDensity: VisualDensity.adaptivePlatformDensity,
       // ),
       home: Scaffold(
+        /*
         appBar: AppBar(
-          backgroundColor: Color(0xff06f71b),
+          backgroundColor: Color(0xff06f71b), //06f71b
           title: Center(child:
             Text('Trader Factory'),
           )
-        ),
+        ),*/
+        backgroundColor: Colors.black,
         body: Center(
           child: BorderedText(
-            strokeWidth: 1.0,
+            strokeWidth: 6.0,
+            strokeColor: Colors.white,
             child: Text(
               'Trader Factory',
               style: TextStyle(
-                decoration: TextDecoration.none,
-                decorationColor: Colors.green,
+                color: Color(0xff06f71b),// Colors.blue, //
+                fontSize: 42.0,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
