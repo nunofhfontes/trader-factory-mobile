@@ -18,7 +18,7 @@ class TraderFactoryApp extends StatelessWidget {
         body: Center(
           child: BorderedText(
             strokeWidth: 10.0,
-            strokeColor: Colors.white,
+            strokeColor: Color(0xffF0F0F0),
             child: Text(
               'Trader Factory',
               style: TextStyle(
