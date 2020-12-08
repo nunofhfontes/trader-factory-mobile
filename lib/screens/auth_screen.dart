@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 
 enum AuthMode { Signup, Login }
@@ -17,17 +18,7 @@ class AuthScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(215, 117, 255, 1).withOpacity(0.5),
-                  Color.fromRGBO(255, 188, 117, 1).withOpacity(0.9),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                stops: [0, 1],
-              ),
-            ),
+            color: Colors.black,
           ),
           SingleChildScrollView(
             child: Container(
@@ -38,34 +29,20 @@ class AuthScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Flexible(
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 20.0),
-                      padding:
-                      EdgeInsets.symmetric(vertical: 8.0, horizontal: 94.0),
-                      transform: Matrix4.rotationZ(-8 * pi / 180)
-                        ..translate(-10.0),
-                      // ..translate(-10.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.deepOrange.shade900,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 8,
-                            color: Colors.black26,
-                            offset: Offset(0, 2),
-                          )
-                        ],
-                      ),
+                    child: BorderedText(
+                      strokeWidth: 10.0,
+                      strokeColor: Color(0xffF0F0F0),
                       child: Text(
-                        'MyShop',
+                        'Trader Factory',
                         style: TextStyle(
-                          color: Theme.of(context).accentTextTheme.title.color,
-                          fontSize: 50,
-                          fontFamily: 'Anton',
-                          fontWeight: FontWeight.normal,
+                          color: Color(0xff0478ef),//blue -> 0478ef, // green -> 06f71b
+                          fontSize: 42.0,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
+
                   ),
                   Flexible(
                     flex: deviceSize.width > 600 ? 2 : 1,
@@ -91,12 +68,15 @@ class AuthCard extends StatefulWidget {
 }
 
 class _AuthCardState extends State<AuthCard> {
+
   final GlobalKey<FormState> _formKey = GlobalKey();
+
   AuthMode _authMode = AuthMode.Login;
   Map<String, String> _authData = {
     'email': '',
     'password': '',
   };
+
   var _isLoading = false;
   final _passwordController = TextEditingController();
 
@@ -134,12 +114,7 @@ class _AuthCardState extends State<AuthCard> {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-      elevation: 8.0,
-      child: Container(
+    return Container(
         height: _authMode == AuthMode.Signup ? 320 : 260,
         constraints:
         BoxConstraints(minHeight: _authMode == AuthMode.Signup ? 320 : 260),
@@ -220,7 +195,6 @@ class _AuthCardState extends State<AuthCard> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
