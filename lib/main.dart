@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bordered_text/bordered_text.dart';
+import 'package:traderfactory_mobile/screens/auth_screen.dart';
 
 void main() {
   runApp(TraderFactoryApp());
@@ -16,7 +17,10 @@ class TraderFactoryApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-          child: BorderedText(
+          child: AuthScreen(),
+          /*
+            child:
+          BorderedText(
             strokeWidth: 10.0,
             strokeColor: Color(0xffF0F0F0),
             child: Text(
@@ -29,6 +33,7 @@ class TraderFactoryApp extends StatelessWidget {
               ),
             ),
           ),
+          */
         ),
       ),
     );
