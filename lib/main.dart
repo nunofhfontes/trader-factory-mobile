@@ -13,28 +13,16 @@ class TraderFactoryApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Trader Factory',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.green,
-      //   scaffoldBackgroundColor: Colors.white30,
-      //   visualDensity: VisualDensity.adaptivePlatformDensity,
-      // ),
       home: Scaffold(
-        /*
-        appBar: AppBar(
-          backgroundColor: Color(0xff06f71b), //06f71b
-          title: Center(child:
-            Text('Trader Factory'),
-          )
-        ),*/
         backgroundColor: Colors.black,
         body: Center(
           child: BorderedText(
-            strokeWidth: 6.0,
+            strokeWidth: 10.0,
             strokeColor: Colors.white,
             child: Text(
               'Trader Factory',
               style: TextStyle(
-                color: Color(0xff06f71b),// Colors.blue, //
+                color: Color(0xff0478ef),//blue -> 0478ef, // green -> 06f71b
                 fontSize: 42.0,
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
@@ -55,6 +43,15 @@ class TraderFactoryApp extends StatelessWidget {
     //   ),
     //   home: MyHomePage(title: 'TraderFactory'),
     // );
+
+
+    /*
+        appBar: AppBar(
+          backgroundColor: Color(0xff06f71b), //06f71b
+          title: Center(child:
+            Text('Trader Factory'),
+          )
+        ),*/
   }
 }
 
