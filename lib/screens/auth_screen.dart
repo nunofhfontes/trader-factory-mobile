@@ -31,15 +31,15 @@ class AuthScreen extends StatelessWidget {
                   Flexible(
                     child: Container(
                       child: BorderedText(
-                        //strokeWidth: 10.0,
-                        //strokeColor: Color(0xffF0F0F0),
+                        strokeWidth: 10.0,
+                        strokeColor: Color(0xffF0F0F0),
                         child: Text(
                           'Trader Factory',
                           style: TextStyle(
                             color: Color(0xff0478ef),
                             //blue -> 0478ef, // green -> 06f71b
-                            fontSize: 52.0,
-                            fontFamily: ,
+                            fontSize: 48.0,
+                            //fontFamily: ,
                             fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
                           ),
