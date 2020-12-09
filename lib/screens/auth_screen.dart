@@ -131,21 +131,20 @@ class _AuthCardState extends State<AuthCard> {
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'E-Mail',
-                    focusColor: Colors.pink,
-                    fillColor: Colors.green,
+                    labelStyle: TextStyle(
+                        color: Color(0xff0478ef),
+                        fontSize: 12
+                    ),
                     enabled: true,
-
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xff0478ef)),
+                      borderSide: BorderSide(
+                        color: Color(0xff0478ef)
+                      ),
                     ),
                     //icon: Icon(Icons.mail),
                   ),
                   style: TextStyle(
                     color: Color(0xff0478ef), // blue 0xff0478ef
-                    backgroundColor: Colors.black,
-                    //textBaseline:
-                    decorationColor: Colors.tealAccent,//Font color change
-                    //backgroundColor: Color(0XFFFFCC00),//TextFormField title background color change
                   ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
@@ -160,7 +159,18 @@ class _AuthCardState extends State<AuthCard> {
                   },
                 ),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Password'),
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    labelStyle: TextStyle(
+                      color: Color(0xff0478ef),
+                      fontSize: 12
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xff0478ef)
+                      ),
+                    ),
+                  ),
                   obscureText: true,
                   controller: _passwordController,
                   validator: (value) {
