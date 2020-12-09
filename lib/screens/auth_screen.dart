@@ -29,20 +29,23 @@ class AuthScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Flexible(
-                    child: BorderedText(
-                      strokeWidth: 10.0,
-                      strokeColor: Color(0xffF0F0F0),
-                      child: Text(
-                        'Trader Factory',
-                        style: TextStyle(
-                          color: Color(0xff0478ef),//blue -> 0478ef, // green -> 06f71b
-                          fontSize: 42.0,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.bold,
+                    child: Container(
+                      child: BorderedText(
+                        strokeWidth: 10.0,
+                        strokeColor: Color(0xffF0F0F0),
+                        child: Text(
+                          'Trader Factory',
+                          style: TextStyle(
+                            color: Color(0xff0478ef),
+                            //blue -> 0478ef, // green -> 06f71b
+                            fontSize: 42.0,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
+                      padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
                     ),
-
                   ),
                   Flexible(
                     flex: deviceSize.width > 600 ? 2 : 1,
@@ -126,7 +129,24 @@ class _AuthCardState extends State<AuthCard> {
             child: Column(
               children: <Widget>[
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'E-Mail'),
+                  decoration: InputDecoration(
+                    labelText: 'E-Mail',
+                    focusColor: Colors.pink,
+                    fillColor: Colors.green,
+                    enabled: true,
+
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xff0478ef)),
+                    ),
+                    //icon: Icon(Icons.mail),
+                  ),
+                  style: TextStyle(
+                    color: Color(0xff0478ef), // blue 0xff0478ef
+                    backgroundColor: Colors.black,
+                    //textBaseline:
+                    decorationColor: Colors.tealAccent,//Font color change
+                    //backgroundColor: Color(0XFFFFCC00),//TextFormField title background color change
+                  ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
                     if (value.isEmpty || !value.contains('@')) {
